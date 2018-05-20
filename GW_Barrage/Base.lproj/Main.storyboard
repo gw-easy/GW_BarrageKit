@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="12y-86-lU3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="09n-GN-om0">
+            <objects>
+                <navigationController id="12y-86-lU3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fpC-ci-aRv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k5F-Gh-xeX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53A-ZA-rUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-724" y="43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vrM-rD-Sbh"/>
+                        <viewControllerLayoutGuide type="bottom" id="bEh-QY-Hmr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfZ-P8-SES" customClass="GW_BarrageShowView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQ6-fh-Tkh">
+                                        <rect key="frame" x="20" y="553" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="NdO-9O-36x"/>
+                                            <constraint firstAttribute="height" constant="30" id="vb4-Cc-YXk"/>
+                                        </constraints>
+                                        <state key="normal" title="开始"/>
+                                        <connections>
+                                            <action selector="startBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hf1-ZB-GIs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AO-FF-1Ev">
+                                        <rect key="frame" x="83" y="553" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="281-df-Ak5"/>
+                                            <constraint firstAttribute="height" constant="30" id="Uc9-Rt-jjO"/>
+                                        </constraints>
+                                        <state key="normal" title=" 暂停"/>
+                                        <connections>
+                                            <action selector="pauseBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGj-ec-Obk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87E-Jr-CuP">
+                                        <rect key="frame" x="147" y="553" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="6Qj-58-mD5"/>
+                                            <constraint firstAttribute="height" constant="30" id="m53-qP-gaE"/>
+                                        </constraints>
+                                        <state key="normal" title="继续"/>
+                                        <connections>
+                                            <action selector="resumeBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yt9-HQ-wn9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0M-Jw-YmM">
+                                        <rect key="frame" x="206" y="553" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="0c2-Vr-EYk"/>
+                                            <constraint firstAttribute="height" constant="30" id="ENQ-GQ-mVq"/>
+                                        </constraints>
+                                        <state key="normal" title="停止"/>
+                                        <connections>
+                                            <action selector="stopBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OFR-Su-aoH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21198996113989632" green="0.21198996113989632" blue="0.21198996113989632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0AO-FF-1Ev" firstAttribute="centerY" secondItem="dQ6-fh-Tkh" secondAttribute="centerY" id="8SP-LP-Vkp"/>
+                                    <constraint firstItem="0AO-FF-1Ev" firstAttribute="leading" secondItem="dQ6-fh-Tkh" secondAttribute="trailing" constant="13" id="ABA-xF-oMs"/>
+                                    <constraint firstAttribute="bottom" secondItem="dQ6-fh-Tkh" secondAttribute="bottom" constant="20" id="TSW-nw-RNM"/>
+                                    <constraint firstItem="X0M-Jw-YmM" firstAttribute="leading" secondItem="87E-Jr-CuP" secondAttribute="trailing" constant="9" id="oJX-Ao-RjQ"/>
+                                    <constraint firstItem="dQ6-fh-Tkh" firstAttribute="leading" secondItem="KfZ-P8-SES" secondAttribute="leading" constant="20" id="v9k-kS-Yjd"/>
+                                    <constraint firstItem="87E-Jr-CuP" firstAttribute="centerY" secondItem="0AO-FF-1Ev" secondAttribute="centerY" id="xCY-p9-Kfy"/>
+                                    <constraint firstItem="X0M-Jw-YmM" firstAttribute="centerY" secondItem="87E-Jr-CuP" secondAttribute="centerY" id="xb7-Jg-TQ0"/>
+                                    <constraint firstItem="87E-Jr-CuP" firstAttribute="leading" secondItem="0AO-FF-1Ev" secondAttribute="trailing" constant="14" id="yeE-YX-ps3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bEh-QY-Hmr" firstAttribute="top" secondItem="KfZ-P8-SES" secondAttribute="bottom" id="9Yf-S8-UmN"/>
+                            <constraint firstItem="KfZ-P8-SES" firstAttribute="top" secondItem="vrM-rD-Sbh" secondAttribute="bottom" id="Hc3-aN-HVO"/>
+                            <constraint firstItem="KfZ-P8-SES" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K2R-Uk-xpm"/>
+                            <constraint firstAttribute="trailing" secondItem="KfZ-P8-SES" secondAttribute="trailing" id="j2m-Lx-nrA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JTP-Rb-arc"/>
+                    <connections>
+                        <outlet property="beginBtn" destination="dQ6-fh-Tkh" id="PMv-GX-oyz"/>
+                        <outlet property="pauseBtn" destination="0AO-FF-1Ev" id="ckZ-KZ-g8V"/>
+                        <outlet property="resumeBtn" destination="87E-Jr-CuP" id="uWb-JC-f58"/>
+                        <outlet property="showView" destination="KfZ-P8-SES" id="y6N-tf-0j0"/>
+                        <outlet property="stopBtn" destination="X0M-Jw-YmM" id="Wrq-Qa-OLJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
