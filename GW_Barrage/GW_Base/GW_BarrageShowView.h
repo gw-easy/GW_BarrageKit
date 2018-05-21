@@ -14,28 +14,29 @@
     dispatch_semaphore_t _idleViewLock;
     dispatch_semaphore_t _trackInfoLock;
 }
-@property (strong,nonatomic)UIView *lowPositionView;
-@property (strong,nonatomic)UIView *middlePositionView;
-@property (strong,nonatomic)UIView *highPositionView;
-@property (strong,nonatomic)UIView *veryHighPositionView;
-@property (strong,nonatomic)GW_BarrageBaseView *lastestBarrageView;
-@property (strong,nonatomic)NSMutableDictionary *trackNextAvailableTime;
+
+@property (strong, nonatomic, nullable)UIView *lowPositionView;
+@property (strong, nonatomic, nullable)UIView *middlePositionView;
+@property (strong, nonatomic, nullable)UIView *highPositionView;
+@property (strong, nonatomic, nullable)UIView *veryHighPositionView;
+@property (strong, nonatomic, nullable)GW_BarrageBaseView *lastestBarrageView;
+@property (strong, nonatomic, nullable)NSMutableDictionary *trackNextAvailableTime;
 @property (assign,nonatomic)BOOL autoClear;
 
 
 //正在运动的弹幕的数组.
-@property (strong,nonatomic,readonly) NSMutableArray<GW_BarrageBaseView *> *animatingViewArray;
+@property (strong,nonatomic,nullable,readonly) NSMutableArray<GW_BarrageBaseView *> *animatingViewArray;
 //弹幕动画执行完毕后等待复用的弹幕的数组.
-@property (strong,nonatomic,readonly) NSMutableArray<GW_BarrageBaseView *> *idleViewArray;
+@property (strong,nonatomic,nullable,readonly) NSMutableArray<GW_BarrageBaseView *> *idleViewArray;
 //视图模型
-@property (strong,nonatomic)GW_BarrageBaseModel *barrageModel;
+@property (strong, nonatomic, nullable)GW_BarrageBaseModel *barrageModel;
 //新出生的弹幕的位置
 @property (assign,nonatomic) GW_BarrageShowPositionStyle showPositionStyle;
 //引擎状态
 @property (assign,nonatomic) GW_BarrageShowStatus showStatus;
 //从缓存池或者注册的列表中返回一个view
-- (nullable GW_BarrageBaseView *)dequeueReusableViewWithClass:(Class)barrageViewClass;
+- (nullable GW_BarrageBaseView *)dequeueReusableViewWithClass:(Class _Nullable )barrageViewClass;
 //发射弹幕.
-- (void)beginBarrageView:(GW_BarrageBaseView *)barrageView;
+- (void)beginBarrageView:(GW_BarrageBaseView *_Nullable)barrageView;
 
 @end

@@ -14,15 +14,17 @@
 
 @end
 @interface GW_BarrageBaseView : UIView
-@property (nonatomic, assign, getter=isIdle) BOOL idle;//是否是空闲状态
-@property (nonatomic, assign) NSTimeInterval idleTime;//开始闲置的时间, 闲置超过5秒的, 自动回收内存
-@property (nonatomic, strong, nullable) GW_BarrageBaseModel *barrageModel;
-@property (nonatomic, strong, readonly, nullable) CAAnimation *barrageAnimation;//当前view所执行的动画.
+@property (assign, nonatomic, getter=isIdle) BOOL idle;//是否是空闲状态
+@property (assign, nonatomic) NSTimeInterval idleTime;//开始闲置的时间, 闲置超过5秒的, 自动回收内存
+@property (strong, nonatomic, nullable) GW_BarrageBaseModel *barrageModel;
+@property (strong, nonatomic, readonly, nullable) CAAnimation *barrageAnimation;//当前view所执行的动画.
+//动画速度
+@property (assign, nonatomic) float speet;
 //当前view所在的弹幕轨道的索引.
-@property (nonatomic, assign) int trackIndex;
+@property (assign, nonatomic) int trackIndex;
 
 //可以监听动画执行完毕的事件以便将View放入缓存池等待下次复用
-- (void)addBarrageAnimationWithDelegate:(id<CAAnimationDelegate>)animationDelegate;
+- (void)addBarrageAnimationWithDelegate:(nullable id <CAAnimationDelegate>)animationDelegate;
 //在复用之前要进行的操作可以放在这个方法里执行
 - (void)prepareForReuse;
 //清空一下上次展示的遗留内容

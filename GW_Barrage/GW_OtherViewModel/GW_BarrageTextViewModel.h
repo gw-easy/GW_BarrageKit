@@ -9,22 +9,22 @@
 #import "GW_BarrageBaseModel.h"
 #import "GW_BarrageBaseView.h"
 @interface GW_BarrageTextModel : GW_BarrageBaseModel
-@property (strong,nonatomic)NSMutableDictionary *textAttributeDict;
+@property (strong,nonatomic,nullable)NSMutableDictionary *textAttributeDict;
 
-@property (nonatomic, strong, nullable) UIFont *textFont;
-@property (nonatomic, strong, nullable) UIColor *textColor;
+@property (strong, nonatomic, nullable) UIFont *textFont;
+@property (strong, nonatomic, nullable) UIColor *textColor;
 
 //字体颜色
-@property (nonatomic, strong, nullable) UIColor *strokeColor;
-@property (nonatomic, assign) int strokeWidth;//笔画宽度(粗细)，取值为 NSNumber 对象（整数），负值填充效果，正值中空效果
+@property (strong, nonatomic, nullable) UIColor *strokeColor;
+@property (assign, nonatomic) int strokeWidth;//笔画宽度(粗细)，取值为 NSNumber 对象（整数），负值填充效果，正值中空效果
 
-@property (nonatomic, copy, nullable) NSString *text;
-@property (nonatomic, copy, nullable) NSAttributedString *attributedText;
+@property (copy, nonatomic, nullable) NSString *text;
+@property (copy, nonatomic, nullable) NSAttributedString *attributedText;
 @end
 
 @interface GW_BarrageTextViewModel : GW_BarrageBaseView
 
-@property (nonatomic, strong) UILabel *textLabel;
-@property (nonatomic, strong, nullable) GW_BarrageTextModel *textModel;
+@property (strong, nonatomic, nullable) UILabel *textLabel;
+@property (strong, nonatomic, nullable) GW_BarrageTextModel *textModel;
 
 @end
