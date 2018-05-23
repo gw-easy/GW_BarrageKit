@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4378BF320B5312200AB23A0 /* backImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4378BF220B5312200AB23A0 /* backImage.jpg */; };
+		C4378BF620B5362B00AB23A0 /* GW_BarrageGifViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4378BF520B5362B00AB23A0 /* GW_BarrageGifViewModel.m */; };
+		C4378BF820B536CA00AB23A0 /* 小太阳.gif in Resources */ = {isa = PBXBuildFile; fileRef = C4378BF720B536CA00AB23A0 /* 小太阳.gif */; };
+		C4378BFB20B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C4378BF920B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.m */; };
 		C4C366FD20B2636D00981236 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C366FC20B2636D00981236 /* AppDelegate.m */; };
 		C4C3670020B2636D00981236 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C366FF20B2636D00981236 /* ViewController.m */; };
 		C4C3670320B2636D00981236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C3670120B2636D00981236 /* Main.storyboard */; };
@@ -15,6 +19,11 @@
 		C4C3670B20B2636D00981236 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3670A20B2636D00981236 /* main.m */; };
 		C4C3671520B2636D00981236 /* GW_BarrageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3671420B2636D00981236 /* GW_BarrageTests.m */; };
 		C4C3672020B2636D00981236 /* GW_BarrageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3671F20B2636D00981236 /* GW_BarrageUITests.m */; };
+		C4C3675020B28C9C00981236 /* CALayer+GW_Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674420B28C9C00981236 /* CALayer+GW_Layer.m */; };
+		C4C3675120B28C9C00981236 /* GW_BarrageBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674720B28C9C00981236 /* GW_BarrageBaseModel.m */; };
+		C4C3675220B28C9C00981236 /* GW_BarrageBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674920B28C9C00981236 /* GW_BarrageBaseView.m */; };
+		C4C3675320B28C9C00981236 /* GW_BarrageShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674C20B28C9C00981236 /* GW_BarrageShowView.m */; };
+		C4C3675420B28C9C00981236 /* GW_BarrageTextViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674F20B28C9C00981236 /* GW_BarrageTextViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4378BEF20B5080A00AB23A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C4378BF220B5312200AB23A0 /* backImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backImage.jpg; sourceTree = "<group>"; };
+		C4378BF420B5362B00AB23A0 /* GW_BarrageGifViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW_BarrageGifViewModel.h; sourceTree = "<group>"; };
+		C4378BF520B5362B00AB23A0 /* GW_BarrageGifViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageGifViewModel.m; sourceTree = "<group>"; };
+		C4378BF720B536CA00AB23A0 /* 小太阳.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "小太阳.gif"; sourceTree = "<group>"; };
+		C4378BF920B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_AnimatedGIFImageSerialization.m; sourceTree = "<group>"; };
+		C4378BFA20B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_AnimatedGIFImageSerialization.h; sourceTree = "<group>"; };
 		C4C366F820B2636D00981236 /* GW_Barrage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GW_Barrage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C366FB20B2636D00981236 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4C366FC20B2636D00981236 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +67,17 @@
 		C4C3671B20B2636D00981236 /* GW_BarrageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GW_BarrageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C3671F20B2636D00981236 /* GW_BarrageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageUITests.m; sourceTree = "<group>"; };
 		C4C3672120B2636D00981236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4C3674320B28C9C00981236 /* CALayer+GW_Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+GW_Layer.h"; sourceTree = "<group>"; };
+		C4C3674420B28C9C00981236 /* CALayer+GW_Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GW_Layer.m"; sourceTree = "<group>"; };
+		C4C3674620B28C9C00981236 /* GW_BarrageBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_BarrageBaseModel.h; sourceTree = "<group>"; };
+		C4C3674720B28C9C00981236 /* GW_BarrageBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageBaseModel.m; sourceTree = "<group>"; };
+		C4C3674820B28C9C00981236 /* GW_BarrageBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_BarrageBaseView.h; sourceTree = "<group>"; };
+		C4C3674920B28C9C00981236 /* GW_BarrageBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageBaseView.m; sourceTree = "<group>"; };
+		C4C3674A20B28C9C00981236 /* GW_BarrageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_BarrageHeader.h; sourceTree = "<group>"; };
+		C4C3674B20B28C9C00981236 /* GW_BarrageShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_BarrageShowView.h; sourceTree = "<group>"; };
+		C4C3674C20B28C9C00981236 /* GW_BarrageShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageShowView.m; sourceTree = "<group>"; };
+		C4C3674E20B28C9C00981236 /* GW_BarrageTextViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_BarrageTextViewModel.h; sourceTree = "<group>"; };
+		C4C3674F20B28C9C00981236 /* GW_BarrageTextViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageTextViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4378BF020B51C8B00AB23A0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C4378BF720B536CA00AB23A0 /* 小太阳.gif */,
+				C4378BF220B5312200AB23A0 /* backImage.jpg */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		C4C366EF20B2636C00981236 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +137,7 @@
 		C4C366FA20B2636D00981236 /* GW_Barrage */ = {
 			isa = PBXGroup;
 			children = (
+				C4C3674120B28C9C00981236 /* GW_BarrageKit */,
 				C4C366FB20B2636D00981236 /* AppDelegate.h */,
 				C4C366FC20B2636D00981236 /* AppDelegate.m */,
 				C4C366FE20B2636D00981236 /* ViewController.h */,
@@ -110,6 +147,7 @@
 				C4C3670620B2636D00981236 /* LaunchScreen.storyboard */,
 				C4C3670920B2636D00981236 /* Info.plist */,
 				C4C3670A20B2636D00981236 /* main.m */,
+				C4378BEF20B5080A00AB23A0 /* PrefixHeader.pch */,
 			);
 			path = GW_Barrage;
 			sourceTree = "<group>";
@@ -130,6 +168,53 @@
 				C4C3672120B2636D00981236 /* Info.plist */,
 			);
 			path = GW_BarrageUITests;
+			sourceTree = "<group>";
+		};
+		C4C3674120B28C9C00981236 /* GW_BarrageKit */ = {
+			isa = PBXGroup;
+			children = (
+				C4378BF020B51C8B00AB23A0 /* Sources */,
+				C4C3674220B28C9C00981236 /* Category */,
+				C4C3674520B28C9C00981236 /* GW_Base */,
+				C4C3674D20B28C9C00981236 /* GW_OtherViewModel */,
+			);
+			path = GW_BarrageKit;
+			sourceTree = "<group>";
+		};
+		C4C3674220B28C9C00981236 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C4C3674320B28C9C00981236 /* CALayer+GW_Layer.h */,
+				C4C3674420B28C9C00981236 /* CALayer+GW_Layer.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C4C3674520B28C9C00981236 /* GW_Base */ = {
+			isa = PBXGroup;
+			children = (
+				C4378BFA20B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.h */,
+				C4378BF920B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.m */,
+				C4C3674620B28C9C00981236 /* GW_BarrageBaseModel.h */,
+				C4C3674720B28C9C00981236 /* GW_BarrageBaseModel.m */,
+				C4C3674820B28C9C00981236 /* GW_BarrageBaseView.h */,
+				C4C3674920B28C9C00981236 /* GW_BarrageBaseView.m */,
+				C4C3674A20B28C9C00981236 /* GW_BarrageHeader.h */,
+				C4C3674B20B28C9C00981236 /* GW_BarrageShowView.h */,
+				C4C3674C20B28C9C00981236 /* GW_BarrageShowView.m */,
+			);
+			path = GW_Base;
+			sourceTree = "<group>";
+		};
+		C4C3674D20B28C9C00981236 /* GW_OtherViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4C3674E20B28C9C00981236 /* GW_BarrageTextViewModel.h */,
+				C4C3674F20B28C9C00981236 /* GW_BarrageTextViewModel.m */,
+				C4378BF420B5362B00AB23A0 /* GW_BarrageGifViewModel.h */,
+				C4378BF520B5362B00AB23A0 /* GW_BarrageGifViewModel.m */,
+			);
+			path = GW_OtherViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +323,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4378BF320B5312200AB23A0 /* backImage.jpg in Resources */,
+				C4378BF820B536CA00AB23A0 /* 小太阳.gif in Resources */,
 				C4C3670820B2636D00981236 /* LaunchScreen.storyboard in Resources */,
 				C4C3670520B2636D00981236 /* Assets.xcassets in Resources */,
 				C4C3670320B2636D00981236 /* Main.storyboard in Resources */,
@@ -266,8 +353,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C3670020B2636D00981236 /* ViewController.m in Sources */,
+				C4C3675320B28C9C00981236 /* GW_BarrageShowView.m in Sources */,
+				C4C3675120B28C9C00981236 /* GW_BarrageBaseModel.m in Sources */,
+				C4C3675220B28C9C00981236 /* GW_BarrageBaseView.m in Sources */,
 				C4C3670B20B2636D00981236 /* main.m in Sources */,
+				C4378BF620B5362B00AB23A0 /* GW_BarrageGifViewModel.m in Sources */,
 				C4C366FD20B2636D00981236 /* AppDelegate.m in Sources */,
+				C4C3675420B28C9C00981236 /* GW_BarrageTextViewModel.m in Sources */,
+				C4378BFB20B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.m in Sources */,
+				C4C3675020B28C9C00981236 /* CALayer+GW_Layer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +525,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8X5ZQ3QPM;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GW_Barrage/PrefixHeader.pch";
 				INFOPLIST_FILE = GW_Barrage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gw.GW-Barrage";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +541,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8X5ZQ3QPM;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GW_Barrage/PrefixHeader.pch";
 				INFOPLIST_FILE = GW_Barrage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gw.GW-Barrage";
 				PRODUCT_NAME = "$(TARGET_NAME)";

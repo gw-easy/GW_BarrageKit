@@ -41,7 +41,7 @@
     _veryHighPositionView = [[UIView alloc] init];
     [self addSubview:_veryHighPositionView];
     self.layer.masksToBounds = YES;
-    
+    self.speet = 1.0;
 }
 
 - (void)setBarrageModel:(GW_BarrageBaseModel *)barrageModel{
@@ -121,6 +121,30 @@
     }
 }
 
+- (void)setSpeet:(float)speet{
+    _speet = speet;
+    
+}
+
+- (void)reloadSpeet{
+    dispatch_semaphore_wait(_animatingViewLock, DISPATCH_TIME_FOREVER);
+    NSEnumerator *enumerator = [self.animatingViewArray reverseObjectEnumerator];
+    GW_BarrageBaseView *bView = nil;
+    //    将layer的动画时间暂停
+    while (bView = [enumerator nextObject]){
+        CFTimeInterval pausedTime = [bView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+        bView.layer.speed = 0.0;
+        bView.layer.timeOffset = pausedTime;
+        
+        bView.layer.speed = self.speet;
+        bView.layer.timeOffset = 0.0;
+        bView.layer.beginTime = 0.0;
+        CFTimeInterval timeSincePause = [bView.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+        bView.layer.beginTime = timeSincePause;
+    }
+    dispatch_semaphore_signal(_animatingViewLock);
+}
+
 - (void)pause {
     
     dispatch_semaphore_wait(_animatingViewLock, DISPATCH_TIME_FOREVER);
@@ -136,14 +160,13 @@
 }
 
 - (void)resume {
-    
     dispatch_semaphore_wait(_animatingViewLock, DISPATCH_TIME_FOREVER);
     NSEnumerator *enumerator = [self.animatingViewArray reverseObjectEnumerator];
     GW_BarrageBaseView *bView = nil;
     //继续上一次时间动画
     while (bView = [enumerator nextObject]){
         CFTimeInterval pausedTime = bView.layer.timeOffset;
-        bView.layer.speed = 1.0;
+        bView.layer.speed = self.speet;
         bView.layer.timeOffset = 0.0;
         bView.layer.beginTime = 0.0;
         CFTimeInterval timeSincePause = [bView.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
@@ -248,7 +271,7 @@
 - (void)addBarrageView:(GW_BarrageBaseView *)barrageView WithPositionPriority:(GW_BarragePositionPriority)positionPriority {
     switch (positionPriority) {
         case GW_BarragePositionMiddle: {
-            [self insertSubview:barrageView aboveSubview:_middlePositionView];
+            [self insertSubview:barrageView belowSubview:_middlePositionView];
         }
             break;
         case GW_BarragePositionHigh: {

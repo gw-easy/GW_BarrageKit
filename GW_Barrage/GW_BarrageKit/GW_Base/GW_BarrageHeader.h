@@ -8,6 +8,7 @@
 
 #ifndef GW_BarrageHeader_h
 #define GW_BarrageHeader_h
+
 @class GW_BarrageBaseModel;
 //动画key
 static NSString *const GW_Barrage_Animation = @"GW_Barrage_Animation";

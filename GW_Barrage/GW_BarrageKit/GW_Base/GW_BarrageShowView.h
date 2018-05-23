@@ -23,6 +23,8 @@
 @property (strong, nonatomic, nullable)NSMutableDictionary *trackNextAvailableTime;
 @property (assign,nonatomic)BOOL autoClear;
 
+//动画速度
+@property (assign, nonatomic) float speet;
 
 //正在运动的弹幕的数组.
 @property (strong,nonatomic,nullable,readonly) NSMutableArray<GW_BarrageBaseView *> *animatingViewArray;
@@ -38,5 +40,7 @@
 - (nullable GW_BarrageBaseView *)dequeueReusableViewWithClass:(Class _Nullable )barrageViewClass;
 //发射弹幕.
 - (void)beginBarrageView:(GW_BarrageBaseView *_Nullable)barrageView;
+//重新设置速度
+- (void)reloadSpeet;
 
 @end

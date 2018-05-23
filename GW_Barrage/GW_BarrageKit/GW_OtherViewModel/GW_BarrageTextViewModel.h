@@ -10,9 +10,12 @@
 #import "GW_BarrageBaseView.h"
 @interface GW_BarrageTextModel : GW_BarrageBaseModel
 @property (strong,nonatomic,nullable)NSMutableDictionary *textAttributeDict;
-
+//字体大小
 @property (strong, nonatomic, nullable) UIFont *textFont;
+//字体颜色
 @property (strong, nonatomic, nullable) UIColor *textColor;
+//背景颜色
+@property (strong, nonatomic, nullable) UIColor *backColor;
 
 //字体颜色
 @property (strong, nonatomic, nullable) UIColor *strokeColor;
@@ -26,5 +29,5 @@
 
 @property (strong, nonatomic, nullable) UILabel *textLabel;
 @property (strong, nonatomic, nullable) GW_BarrageTextModel *textModel;
-
+@property (strong, nonatomic, nullable) CALayer *backImageLayer;
 @end

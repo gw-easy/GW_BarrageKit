@@ -20,6 +20,8 @@
 @property (assign, nonatomic) CGFloat cornerRadius; // Default is 8
 
 @property (assign, nonatomic) NSRange showRange;//渲染范围, 最终渲染出来的弹幕的Y坐标 showRange.location<=showRange.y<=showRange.length-barrageView.height
+//背景图片
+@property (strong, nonatomic, nullable) UIImage *backImage;
 @end
 
 @interface GW_BarrageTrackModel:NSObject
