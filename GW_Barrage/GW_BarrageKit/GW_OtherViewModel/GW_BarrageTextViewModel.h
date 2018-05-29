@@ -26,8 +26,5 @@
 @end
 
 @interface GW_BarrageTextViewModel : GW_BarrageBaseView
-
-@property (strong, nonatomic, nullable) UILabel *textLabel;
 @property (strong, nonatomic, nullable) GW_BarrageTextModel *textModel;
-@property (strong, nonatomic, nullable) CALayer *backImageLayer;
 @end

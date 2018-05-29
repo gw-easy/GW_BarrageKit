@@ -24,6 +24,8 @@
 		C4C3675220B28C9C00981236 /* GW_BarrageBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674920B28C9C00981236 /* GW_BarrageBaseView.m */; };
 		C4C3675320B28C9C00981236 /* GW_BarrageShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674C20B28C9C00981236 /* GW_BarrageShowView.m */; };
 		C4C3675420B28C9C00981236 /* GW_BarrageTextViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C3674F20B28C9C00981236 /* GW_BarrageTextViewModel.m */; };
+		C4F8447F20BD1EAF00D284D6 /* GW_BarrageAppendImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F8447E20BD1EAF00D284D6 /* GW_BarrageAppendImageViewModel.m */; };
+		C4F8448220BD262A00D284D6 /* GW_BarrageVerticalTextViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F8448120BD262A00D284D6 /* GW_BarrageVerticalTextViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,10 @@
 		C4C3674C20B28C9C00981236 /* GW_BarrageShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageShowView.m; sourceTree = "<group>"; };
 		C4C3674E20B28C9C00981236 /* GW_BarrageTextViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW_BarrageTextViewModel.h; sourceTree = "<group>"; };
 		C4C3674F20B28C9C00981236 /* GW_BarrageTextViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageTextViewModel.m; sourceTree = "<group>"; };
+		C4F8447D20BD1EAF00D284D6 /* GW_BarrageAppendImageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW_BarrageAppendImageViewModel.h; sourceTree = "<group>"; };
+		C4F8447E20BD1EAF00D284D6 /* GW_BarrageAppendImageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageAppendImageViewModel.m; sourceTree = "<group>"; };
+		C4F8448020BD262A00D284D6 /* GW_BarrageVerticalTextViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GW_BarrageVerticalTextViewModel.h; sourceTree = "<group>"; };
+		C4F8448120BD262A00D284D6 /* GW_BarrageVerticalTextViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GW_BarrageVerticalTextViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +219,10 @@
 				C4C3674F20B28C9C00981236 /* GW_BarrageTextViewModel.m */,
 				C4378BF420B5362B00AB23A0 /* GW_BarrageGifViewModel.h */,
 				C4378BF520B5362B00AB23A0 /* GW_BarrageGifViewModel.m */,
+				C4F8447D20BD1EAF00D284D6 /* GW_BarrageAppendImageViewModel.h */,
+				C4F8447E20BD1EAF00D284D6 /* GW_BarrageAppendImageViewModel.m */,
+				C4F8448020BD262A00D284D6 /* GW_BarrageVerticalTextViewModel.h */,
+				C4F8448120BD262A00D284D6 /* GW_BarrageVerticalTextViewModel.m */,
 			);
 			path = GW_OtherViewModel;
 			sourceTree = "<group>";
@@ -352,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F8447F20BD1EAF00D284D6 /* GW_BarrageAppendImageViewModel.m in Sources */,
 				C4C3670020B2636D00981236 /* ViewController.m in Sources */,
 				C4C3675320B28C9C00981236 /* GW_BarrageShowView.m in Sources */,
 				C4C3675120B28C9C00981236 /* GW_BarrageBaseModel.m in Sources */,
@@ -359,6 +370,7 @@
 				C4C3670B20B2636D00981236 /* main.m in Sources */,
 				C4378BF620B5362B00AB23A0 /* GW_BarrageGifViewModel.m in Sources */,
 				C4C366FD20B2636D00981236 /* AppDelegate.m in Sources */,
+				C4F8448220BD262A00D284D6 /* GW_BarrageVerticalTextViewModel.m in Sources */,
 				C4C3675420B28C9C00981236 /* GW_BarrageTextViewModel.m in Sources */,
 				C4378BFB20B536DB00AB23A0 /* GW_AnimatedGIFImageSerialization.m in Sources */,
 				C4C3675020B28C9C00981236 /* CALayer+GW_Layer.m in Sources */,

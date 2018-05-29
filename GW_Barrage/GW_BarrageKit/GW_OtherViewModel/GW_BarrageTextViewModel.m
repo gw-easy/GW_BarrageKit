@@ -61,17 +61,16 @@ static const CGFloat backMargic = 10;
 @interface GW_BarrageTextViewModel(){
     CGRect _backRect;
 }
+@property (strong, nonatomic, nullable) UILabel *textLabel;
 
+@property (strong, nonatomic, nullable) CALayer *backImageLayer;
 @end
 @implementation GW_BarrageTextViewModel
-- (void)prepareForReuse {
-    [super prepareForReuse];
+
+- (void)updateSubviewsData {
     if (self.textModel.backImage) {
         self.textModel.backColor = nil;
     }
-}
-
-- (void)updateSubviewsData {
     if (!_textLabel) {
         [self addSubview:self.textLabel];
     }
@@ -86,7 +85,7 @@ static const CGFloat backMargic = 10;
 }
 
 - (void)convertContentToImage {
-    UIImage *contentImage = [self.layer convertContentToImageWithSize:self.textModel.backColor!=nil?_backRect.size:(self.textModel.backImage!=nil?self.textModel.backImage.size:_textLabel.frame.size)];
+    UIImage *contentImage = [self.layer convertContentToImageWithSize:self.textModel.backColor!=nil?_backRect.size:(self.textModel.backImage!=nil?(CGRectEqualToRect(self.textModel.backImageRect, CGRectNull)?self.textModel.backImage.size:self.textModel.backImageRect.size):_textLabel.frame.size)];
     [self.layer setContents:(__bridge id)contentImage.CGImage];
 }
 
@@ -124,9 +123,15 @@ static const CGFloat backMargic = 10;
     }
     [self.layer insertSublayer:self.backImageLayer atIndex:0];
     [self.backImageLayer setContents:(__bridge id)self.textModel.backImage.CGImage];
-    self.backImageLayer.frame = CGRectMake(0.0, 0.0, self.textModel.backImage.size.width, self.textModel.backImage.size.height);
+    
+    if (CGRectEqualToRect(self.textModel.backImageRect, CGRectNull)) {
+        self.backImageLayer.frame = CGRectMake(0.0, 0.0, self.textModel.backImage.size.width, self.textModel.backImage.size.height);
+    }else{
+        self.backImageLayer.frame = self.textModel.backImageRect;
+    }
+    
     CGPoint center = self.backImageLayer.position;
-    center.y += 17.0;
+    center.y += self.textModel.textToBackImageOffSet;
     self.textLabel.center = center;
 }
 
@@ -167,6 +172,13 @@ static const CGFloat backMargic = 10;
 - (void)setBarrageModel:(GW_BarrageBaseModel *)barrageModel{
     [super setBarrageModel:barrageModel];
     self.textModel = (GW_BarrageTextModel *)barrageModel;
+}
+
+- (CALayer *)backImageLayer{
+    if (!_backImageLayer) {
+        _backImageLayer = [[CALayer alloc] init];
+    }
+    return _backImageLayer;
 }
 
 @end

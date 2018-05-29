@@ -11,6 +11,7 @@
 #import "GW_BarrageGifViewModel.h"
 #import "GW_BarrageShowView.h"
 #import "GW_AnimatedGIFImageSerialization.h"
+#import "GW_BarrageVerticalTextViewModel.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet GW_BarrageShowView *showView;
 @property (weak, nonatomic) IBOutlet UIButton *beginBtn;
@@ -65,11 +66,10 @@
 - (void)addBarrage {
     [self performSelector:@selector(addNormalBarrage) withObject:nil afterDelay:0.5];
     [self performSelector:@selector(addBackgroundColorBarrage) withObject:nil afterDelay:0.5];
-//    [self performSelector:@selector(addWalkBannerBarrage) withObject:nil afterDelay:0.5];
-//    [self performSelector:@selector(addStopoverBarrage) withObject:nil afterDelay:0.5];
+    [self performSelector:@selector(addStopoverBarrage) withObject:nil afterDelay:0.5];
     [self performSelector:@selector(addMixedImageAndTextBarrage) withObject:nil afterDelay:0.5];
     [self performSelector:@selector(addGifBarrage) withObject:nil afterDelay:0.5];
-//    [self performSelector:@selector(addVerticalAnimationCell) withObject:nil afterDelay:0.5];
+    [self performSelector:@selector(addVerticalBarrage) withObject:nil afterDelay:0.5];
 }
 
 - (void)addNormalBarrage {
@@ -87,6 +87,23 @@
     self.showView.barrageModel = textDescriptor;
 
     [self performSelector:@selector(addNormalBarrage) withObject:nil afterDelay:0.25];
+}
+
+- (void)addVerticalBarrage {
+    [self updateTitle];
+    
+    GW_BarrageTextModel *textDescriptor = [[GW_BarrageTextModel alloc] init];
+    textDescriptor.text = [NSString stringWithFormat:@"///GW_Barrage///"];
+    textDescriptor.textColor = [UIColor yellowColor];
+    textDescriptor.positionPriority = GW_BarragePositionLow;
+    textDescriptor.textFont = [UIFont systemFontOfSize:17.0];
+    textDescriptor.strokeColor = [[UIColor orangeColor] colorWithAlphaComponent:0.3];
+    textDescriptor.strokeWidth = -1;
+    textDescriptor.animationDuration = 3;
+    textDescriptor.barrageViewClass = [GW_BarrageVerticalTextViewModel class];
+    self.showView.barrageModel = textDescriptor;
+    
+    [self performSelector:@selector(addVerticalBarrage) withObject:nil afterDelay:0.25];
 }
 
 - (void)addBackgroundColorBarrage {
@@ -129,7 +146,7 @@
     CGFloat minOriginY = CGRectGetMidY(self.view.frame) - bannerHeight;
     CGFloat maxOriginY = CGRectGetMidY(self.view.frame) + bannerHeight;
     textDescriptor.showRange = NSMakeRange(minOriginY, maxOriginY);
- 
+    textDescriptor.backImageRect = CGRectMake(0, 0, self.view.frame.size.width, 100);
     textDescriptor.backImage = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"backImage.jpg" ofType:nil]];
     self.showView.barrageModel = textDescriptor;
     
@@ -142,13 +159,11 @@
     textDescriptor.animationDuration = 4;
     textDescriptor.backColor = GW_RandomColor;
     textDescriptor.barrageViewClass = [GW_BarrageTextViewModel class];
-
-//    YYAnimatedImageView *imageView = [[YYAnimatedImageView alloc] initWithImage:image];
     
     NSMutableAttributedString *mAttStr = [[NSMutableAttributedString alloc] init];
 
     [mAttStr insertAttributedString:[self setAttTextImage] atIndex:0];
-//    NSMutableAttributedString *mAttributedString = [NSMutableAttributedString attachmentStringWithContent:imageView contentMode:UIViewContentModeCenter attachmentSize:imageView.size alignToFont:[UIFont boldSystemFontOfSize:25.0] alignment:YYTextVerticalAlignmentCenter];
+
     [mAttStr appendAttributedString:[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"~GW_hhh~"] attributes:@{NSForegroundColorAttributeName:GW_RandomColor}]];
     
     [mAttStr appendAttributedString:[self setAttTextImage]];
@@ -198,9 +213,9 @@
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addNormalBarrage) object:nil];
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addBackgroundColorBarrage) object:nil];
-//    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addWalkBannerBarrage) object:nil];
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addMixedImageAndTextBarrage) object:nil];
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addGifBarrage) object:nil];
-//    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addStopoverBarrage) object:nil];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addStopoverBarrage) object:nil];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(addVerticalBarrage) object:nil];
 }
 @end

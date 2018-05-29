@@ -18,7 +18,8 @@
 @property (strong, nonatomic, nullable) UIColor *borderColor; // Default is no border
 @property (assign, nonatomic) CGFloat borderWidth; // Default is 0
 @property (assign, nonatomic) CGFloat cornerRadius; // Default is 8
-
+@property (assign, nonatomic) CGRect backImageRect;//背景图片大小
+@property (assign, nonatomic) CGFloat textToBackImageOffSet;//字体和背景图片中心点的偏移量
 @property (assign, nonatomic) NSRange showRange;//渲染范围, 最终渲染出来的弹幕的Y坐标 showRange.location<=showRange.y<=showRange.length-barrageView.height
 //背景图片
 @property (strong, nonatomic, nullable) UIImage *backImage;

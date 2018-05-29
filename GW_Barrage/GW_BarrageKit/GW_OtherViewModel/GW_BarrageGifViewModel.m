@@ -7,7 +7,9 @@
 //
 
 #import "GW_BarrageGifViewModel.h"
-
+@interface GW_BarrageGifViewModel()
+@property (strong, nonatomic, nullable) UIImageView *aniImageView;
+@end
 @implementation GW_BarrageGifViewModel
 
 - (void)updateSubviewsData {
@@ -21,6 +23,9 @@
     self.aniImageView.frame = CGRectMake(0.0, 0.0, 100.0, 100.0);
 }
 
+- (void)removeSubViewsAndSublayers{
+    
+}
 
 - (void)addBarrageAnimationWithDelegate:(id<CAAnimationDelegate>)animationDelegate {
     [super addBarrageAnimationWithDelegate:animationDelegate];

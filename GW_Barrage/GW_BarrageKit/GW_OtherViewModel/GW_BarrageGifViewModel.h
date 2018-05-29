@@ -9,5 +9,5 @@
 #import "GW_BarrageBaseView.h"
 
 @interface GW_BarrageGifViewModel : GW_BarrageBaseView
-@property (strong, nonatomic, nullable) UIImageView *aniImageView;
+
 @end
