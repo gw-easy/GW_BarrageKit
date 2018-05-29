@@ -155,6 +155,10 @@
 
 - (void)addMixedImageAndTextBarrage {
     GW_BarrageTextModel *textDescriptor = [[GW_BarrageTextModel alloc] init];
+    textDescriptor.touchAction = ^(GW_BarrageBaseModel *descriptor){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"OCBarrage" message:@"全民超人为您服务" delegate:nil cancelButtonTitle:@"朕知道了" otherButtonTitles:nil];
+        [alertView show];
+    };
     textDescriptor.positionPriority = GW_BarragePositionVeryHigh;
     textDescriptor.animationDuration = 4;
     textDescriptor.backColor = GW_RandomColor;

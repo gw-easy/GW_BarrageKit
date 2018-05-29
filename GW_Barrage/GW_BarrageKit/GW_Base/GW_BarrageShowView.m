@@ -535,6 +535,7 @@
     }
 }
 
+//图层点击事件
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     if (event.type == UIEventTypeTouches) {
         UITouch *touch = [touches.allObjects firstObject];
